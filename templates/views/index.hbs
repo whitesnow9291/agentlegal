@@ -1,0 +1,41 @@
+{{!
+< default}} <div class="container">
+	<div class="jumbotron"><img src="/images/logo.svg" width="160">
+		<div class="cssload-box-loading" style="z-index:1;">
+		</div>
+		<div class="pay_result">
+			<h1>Pay Result</h1>
+
+			<p class='pay_result_success'> Successfully Paid </p>
+			<p class='pay_result_error'> There happened some error during payment, please try again </p>
+		</div>
+
+		<script src="https://js.stripe.com/v3/"></script>
+		<form>
+			<label>
+			<span>Name</span>
+			<input name="cardholder-name" class="field" placeholder="Jane Doe" />
+		</label>
+			<label>
+			<span>Phone</span>
+			<input class="field" placeholder="(123) 456-7890" type="tel" />
+		</label>
+			<label>
+			<span>ZIP code</span>
+			<input name="address-zip" class="field" placeholder="94110" />
+		</label>
+			<label>
+			<span>Card</span>
+			<div id="card-element" class="field"></div>
+		</label>
+			<button type="submit">Pay $25</button>
+			<div class="outcome">
+				<div class="error" role="alert"></div>
+				<div class="success">
+					Success! Your Stripe token is <span class="token"></span>
+				</div>
+			</div>
+		</form>
+	</div>
+	</div>
+	<script src="/js/index.js"></script>

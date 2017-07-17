@@ -25,7 +25,7 @@ exports = module.exports = function (req, res) {
 			// YOUR CODE: Save the customer ID and other info in a database for later.
 			console.log("customer created--"+customer.id);
 			return stripe.charges.create({
-				amount: 2500,
+				amount: 100,
 				currency: "usd",
 				customer: customer.id,
 			});
